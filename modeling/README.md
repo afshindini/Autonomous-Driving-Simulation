@@ -63,8 +63,7 @@ T_e = x_{\theta}(a_0 + a_1 \omega_e + a_2 \omega_e^2)
 The load forces consist of aerodynamic drag $F_{aero}$, rolling friction $R_x$, and gravitational force $F_g$ from an incline at angle $\alpha$. The aerodynamic drag is a quadratic model and the friction is a linear model.
 
 $$\begin{align*}
-F_{load} &= F_{aero} + R_x + F_g \\
-
+F_{load} = F_{aero} + R_x + F_g
 \end{align*}$$
 
 Note that the absolute value is ignored for friction since the model is used for only forward motion ($\dot{x} \ge 0$). 
