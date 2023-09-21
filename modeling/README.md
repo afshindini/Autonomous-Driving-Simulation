@@ -29,7 +29,13 @@ You can find more information regarding how these equations are derived from thi
 
 ### Kinematic Model Simulation
 
-The car kinematic model is defined in `kinematic_model.py` and in the class `Car`. The `Trajectory` class contains methods for traveing in different types of trajectories such as circle, spiral, wave, square and infinity routes. By running the related code, you would understand how kinematic model of a car works in different situations.
+The car kinematic model is defined in `kinematic_model.py` and in the class `Car`. The `Trajectory` class contains methods for traveing in different types of trajectories such as circle, spiral, wave, square and infinity routes. By running the related code, you would understand how kinematic model of a car works in different situations. The results are shown as following:
+
+<p>
+  <img alt="img-name" src="./images/kinematic_results.gif" align="center">
+</p>
+
+## Dynamic Longitudinal Vehicle Model
 
 
 
