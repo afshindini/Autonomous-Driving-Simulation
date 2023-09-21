@@ -73,14 +73,14 @@ Note that the absolute value is ignored for friction since the model is used for
  
 The tire force is computed using the engine speed and wheel slip equations.
 
-$$\begin{align*}
-\omega_w &= (GR)\omega_e \\
-s &= \frac{\omega_w r_e - \dot{x}}{\dot{x}}\\
-F_x &= \{\begin{array}{lr}
-cs, &  |s| < 1\\
-F_{max}, & \text{otherwise}
-\end{array}\} 
-\end{align*}$$
+$$\begin{align}
+    \omega_w &= (GR)\omega_e \\
+    s = \frac{\omega_w r_e - \dot{x}}{\dot{x}}\\
+    F_x = \{\begin{array}{lr}
+        cs, &  |s| < 1\\
+        F_{max}, & \text{otherwise}
+        \end{array}\} 
+\end{align}$$
 
 Where $\omega_w$ is the wheel angular velocity and $s$ is the slip ratio. 
 
