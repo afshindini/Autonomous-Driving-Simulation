@@ -32,12 +32,24 @@ You can find more information regarding how these equations are derived from thi
 The car kinematic model is defined in `kinematic_model.py` and in the class `Car`. The `Trajectory` class contains methods for traveing in different types of trajectories such as circle, spiral, wave, square and infinity routes. By running the related code, you would understand how kinematic model of a car works in different situations. The results are shown as following:
 
 <p align="center">
-  <img alt="img-name" src="./images/kinematic_results.gif" align="center">
+    <img src="./images/circle-trajectory.gif" title="circle" width="400" height="400"/>
+    <img src="./images/square-trajectory.gif" title="square" width="400" height="400"/> 
+    <img src="./images/spiral-trajectory.gif" title="spiral" width="400" height="400"/> 
 </p>
+
+<p align="center">
+    <img src="./images/wave-trajectory.gif" title="wave" width="400" height="400"/>
+    <img src="./images/infinity-trajectory.gif" title="infinity" width="400" height="400"/> 
+</p>
+
 
 ## Dynamic Longitudinal Vehicle Model
 
+The dynamic modeling analyzes the effects of forces on the vehicle. Longitudinal modeling gets the throttle inputs from the vehicle as the throttle percentage $x_{\theta}\in[0,1]$ which provides torque to the engine and subsequently accelerates the vehicle in the longitudinal direction. It is good to mention that the throttle inputs transfer energy from the engine to the torque converter, then to transmission equipment, and finally to the wheels. By using the third rule of newton, these stages can be bundled together in a single inertia term in the following equations:
 
+$$\begin{align}
+    J_e \dot{\omega}_e &= T_e - (GR)(r_{eff} F_{load}) \\ m\ddot{x} &= F_x - F_{load}
+\end{align}$$
 
-
+where $J_e$ is the bundled inertia, $T_e$ is the engine torque, $GR$ is the gear ratio, 
 

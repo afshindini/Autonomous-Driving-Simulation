@@ -1,7 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
-import matplotlib.image as mpimg
-from dataclasses import dataclass
+import matplotlib.animation as animation
 
 
 
@@ -66,6 +65,26 @@ class Trajectory(Car):
         plt.plot(x, y, label=f'Trajectory of car for {self.shape} route.')
         plt.legend()
         plt.show()
+    
+
+    def plot_animated_trajectory(self, x, y) -> None:
+        """Plot the animated car trajectory"""
+        frame = 10
+        fig, ax = plt.subplots()
+        ax.axis('equal')
+        line, = ax.plot(x, y, label=f'Trajectory of car for {self.shape} route.')
+
+        def animate(i):
+            line.set_ydata(y[:i*frame])
+            line.set_xdata(x[:i*frame])
+            return line,
+        anim = animation.FuncAnimation(fig, animate, frames=10000, interval=1)
+        ax.legend()
+        writergif = animation.PillowWriter(fps=30)
+        anim.save(f'./modeling/images/{self.shape}-trajectory.gif', writer=writergif)
+        plt.close()
+
+
 
 
     def circle(self, r:float) -> None:
@@ -85,6 +104,7 @@ class Trajectory(Car):
                 self.step(self.v, 0)
 
         self.plot_trajectory(x,y)
+        self.plot_animated_trajectory(x,y)
               
 
     def square(self) -> None:
@@ -108,6 +128,7 @@ class Trajectory(Car):
             self.step(self.v, w[i])
 
         self.plot_trajectory(x,y)
+        self.plot_animated_trajectory(x,y)
   
 
     def spiral(self) -> None:
@@ -125,6 +146,7 @@ class Trajectory(Car):
             self.step(self.v, w[i])
 
         self.plot_trajectory(x,y)
+        self.plot_animated_trajectory(x,y)
 
 
     def wave(self) -> None:
@@ -146,6 +168,7 @@ class Trajectory(Car):
             self.step(self.v, w[i])
 
         self.plot_trajectory(x,y)
+        self.plot_animated_trajectory(x,y)
 
 
     def infinity(self, r:float) -> None:
@@ -166,6 +189,7 @@ class Trajectory(Car):
             self.step(self.v, w) 
 
         self.plot_trajectory(x,y)
+        self.plot_animated_trajectory(x,y)
 
 
 if __name__ == '__main__':
