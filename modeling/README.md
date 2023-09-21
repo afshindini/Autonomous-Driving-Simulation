@@ -48,7 +48,7 @@ The car kinematic model is defined in `kinematic_model.py` and in the class `Car
 The dynamic modeling analyzes the effects of forces on the vehicle. Longitudinal modeling gets the throttle inputs from the vehicle as the throttle percentage $x_{\theta}\in[0,1]$ which provides torque to the engine and subsequently accelerates the vehicle in the longitudinal direction. It is good to mention that the throttle inputs transfer energy from the engine to the torque converter, then to transmission equipment, and finally to the wheels. By using the third rule of newton, these stages can be bundled together in a single inertia term in the following equations:
 
 $$\begin{align*}
-J_e \dot{{\omega}_e} = T_e - (GR)(r_{eff} F_{load}) \\ m\ddot{x} = F_x - F_{load}
+J_e
 \end{align*}$$
 
 where $J_e$ is the bundled inertia, $T_e$ is the engine torque, $GR$ is the gear ratio, $r_{eff}$ is the effective tire radius, $m$ is the vehicle mass, $x$ is the vehicle position, $F_x$ is the tire force, and $F_{load}$ is the total load force.  
