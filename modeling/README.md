@@ -65,8 +65,7 @@ The load forces consist of aerodynamic drag $F_{aero}$, rolling friction $R_x$, 
 $$\begin{align}
     F_{load} &= F_{aero} + R_x + F_g \\
     F_{aero} &= \frac{1}{2} C_a \rho A \dot{x}^2 = c_a \dot{x}^2\\
-    R_x &= N(\hat{c}_{r,0} + \hat{c}_{r,1}|\dot{x}| + \hat{c}_{r,2}\dot{x}^2) \approx c_{r,1} \dot{x}\\
-    F_g &= mg\sin{\alpha}
+
 \end{align}$$
 
 Note that the absolute value is ignored for friction since the model is used for only forward motion ($\dot{x} \ge 0$). 
