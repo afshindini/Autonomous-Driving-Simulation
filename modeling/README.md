@@ -32,14 +32,14 @@ You can find more information regarding how these equations are derived from thi
 The car kinematic model is defined in `kinematic_model.py` and in the class `Car`. The `Trajectory` class contains methods for traveing in different types of trajectories such as circle, spiral, wave, square and infinity routes. By running the related code, you would understand how kinematic model of a car works in different situations. The results are shown as following:
 
 <p align="center">
-    <img src="./images/circle-trajectory.gif" title="circle" width="250" height="250"/>
-    <img src="./images/square-trajectory.gif" title="square" width="250" height="250"/> 
-    <img src="./images/spiral-trajectory.gif" title="spiral" width="250" height="250"/> 
+    <img src="./images/circle-trajectory.gif" title="circle" width="300" height="300"/>
+    <img src="./images/square-trajectory.gif" title="square" width="300" height="300"/> 
+    <img src="./images/spiral-trajectory.gif" title="spiral" width="300" height="300"/> 
 </p>
 
 <p align="center">
-    <img src="./images/wave-trajectory.gif" title="wave" width="250" height="250"/>
-    <img src="./images/infinity-trajectory.gif" title="infinity" width="250" height="250"/> 
+    <img src="./images/wave-trajectory.gif" title="wave" width="300" height="300"/>
+    <img src="./images/infinity-trajectory.gif" title="infinity" width="300" height="300"/> 
 </p>
 
 
