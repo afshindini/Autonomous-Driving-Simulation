@@ -64,7 +64,6 @@ The load forces consist of aerodynamic drag $F_{aero}$, rolling friction $R_x$, 
 
 $$\begin{align*}
 F_{load} = F_{aero} + R_x + F_g \\
-F_{aero} = \frac{1}{2} C_a \rho A \dot{x}^2 = c_a \dot{x}^2 \\
 
 \end{align*}$$
 
