@@ -93,8 +93,8 @@ Where $\omega_w$ is the wheel angular velocity and $s$ is the slip ratio.
 The car longitudinal model is defined in `longitudinal_model.py` and in the class `car`. As a sample of testing the model, we assume that the car will travel a road with different slopes (left figure) and also with the throttle input varries in 20 seconds (right figure) as is shown below:
 
 <p align="center">
-  <img alt="img-name" src="./images/sample_ramp.png" width="550" height="300">
-  <img alt="img-name" src="./images/sample_throttle.png" width="500" height="300">
+  <img alt="img-name" src="./images/sample_ramp.png" width="450" height="250">
+  <img alt="img-name" src="./images/sample_throttle.png" width="400" height="250">
 </p>
 
 The result of the simulation of longitudinal modeling would be as following. The vehicle begins at 20% throttle and gradually increases to 50% throttle. This is maintained for 10 seconds as the vehicle climbs the steeper slope. Afterwards, the vehicle reduces the throttle to 0. you should see that the vehicle crosses the ramp at ~15s where the throttle input begins to decrease. 
