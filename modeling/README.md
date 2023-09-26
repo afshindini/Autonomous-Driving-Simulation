@@ -103,3 +103,41 @@ The result of the simulation of longitudinal modeling would be as following. The
   <img alt="img-name" src="./images/longitudinal-trajectory.gif" width="500" height="400">
 </p>
 
+## Dynamic Lateral Vehicle Model
+
+If we assume that the longitudinal velocity, $v$, of the vehicle is constant, the left and right axels are lumped into a single wheel, and the supression movement, road inclination and aerodynamic influences are neglected, we can form the lateral model of a vehicle as following:
+<p>
+  <img alt="img-name" src="./images/lateral_model.png" width="500" height="350" align="right">
+</p>
+
+$$
+    \begin{bmatrix}
+         \dot{y}\\
+         \dot\beta\\ 
+         \dot\psi\\ 
+         \ddot\psi 
+     \end{bmatrix}
+     =
+    \begin{bmatrix}
+         0 & v & v & 0\\
+         0 & -\frac{c_r+c_f}{mv} & 0 & \frac{c_rl_r-c_fl_f}{mv^2}-1\\ 
+         0 & 0 & 0 & 1\\ 
+         0 & \frac{c_rl_r-c_fl_f}{I_z} & 0 & -\frac{c_r{l_r}^2+c_f{l_f}^2}{I_zv}
+     \end{bmatrix}
+    \begin{bmatrix}
+         0\\
+         \beta\\ 
+         \psi\\ 
+         \dot\psi 
+     \end{bmatrix}
+     +
+    \begin{bmatrix}
+         0\\
+         \frac{c_f}{mv}\\ 
+         0\\ 
+         \frac{c_fl_f}{I_z} 
+     \end{bmatrix}
+     \delta
+$$
+
+where $\delta$ is driver steering input. The state variables are $y$ as lateral position, $\beta$ as side slip angle, $\psi$ as yaw angle, and $\dot\psi$ as yaw rate. $c_r$ and $c_f$ are rear and front cornering stiffness constants and $I_z$ is the vehicle inertia.
