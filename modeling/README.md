@@ -141,3 +141,7 @@ $$
 $$
 
 where $\delta$ is driver steering input. The state variables are $y$ as lateral position, $\beta$ as side slip angle, $\psi$ as yaw angle, and $\dot\psi$ as yaw rate. $c_r$ and $c_f$ are rear and front cornering stiffness constants and $I_z$ is the vehicle inertia.
+
+### Lateral Model Simulation
+
+The car lateral model is defined in `lateral_model.py` and in the class `car`. One can test the model by easily use the `step` method while initialzing a `Car` instance with appropriate values. 
