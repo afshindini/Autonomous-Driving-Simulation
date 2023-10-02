@@ -67,5 +67,6 @@ In this images, you can see the reference and traveled trajectories in order to 
 </p>
 
 <video align="center" width="500" height="350" controls>
-  <source src="results.mp4" type="video/mp4">
+  <source src="./images/results.mp4" type="video/mp4">
 </video>
+
