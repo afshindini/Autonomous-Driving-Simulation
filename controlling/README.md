@@ -51,10 +51,10 @@ If the simulation runs slowly, you can try increasing the period at which the li
 ## Results
 The results of our simulation is shown in the following images as you can see the reference track and the traveled one in addition to the throttle, brake, and steer inputs of the vehicle in addition to the forward speed.
 <p align="center">
-    <img src="./images/forward_speed.png" title="speed"/>
-    <img src="./images/steer_output.png" title="steer"/> 
-    <img src="./images/brake_output.png" title="brake"/> 
-    <img src="./images/throttle_output.png" title="throttle"/>
+    <img src="./images/forward_speed.png" title="speed" width="300" height="200" />
+    <img src="./images/steer_output.png" title="steer" width="300" height="200" /> 
+    <img src="./images/brake_output.png" title="brake" width="300" height="200" /> 
+    <img src="./images/throttle_output.png" title="throttle" width="300" height="200" />
 </p>
 
 In this images, you can see the reference and traveled trajectories in order to find out about the accuracy of the lateral controller as well as the accuracy of the longitudinal controller. The simulation video is also added here.
