@@ -62,8 +62,8 @@ In this images, you can see the reference and traveled trajectories in order to 
     <img src="./images/trajectory.png" title="speed"/>
 </p>
 <p align="center">
-    <img src="./images/location_results.png" title="steer"/> 
-    <img src="./images/speed_results.png" title="brake"/> 
+    <img src="./images/location_results.png" title="steer" width="500" height="350" /> 
+    <img src="./images/speed_results.png" title="brake" width="500" height="350" /> 
 </p>
 
 <video align="center" width="500" height="350" controls>
