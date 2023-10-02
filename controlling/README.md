@@ -57,7 +57,7 @@ The results of our simulation is shown in the following images as you can see th
     <img src="./images/throttle_output.png" title="throttle" width="200" height="150" />
 </p>
 
-In this images, you can see the reference and traveled trajectories in order to find out about the accuracy of the lateral controller as well as the accuracy of the longitudinal controller. The simulation video is also added [here](./images/results.mp4).
+In this images, you can see the reference and traveled trajectories in order to find out about the accuracy of the lateral controller as well as the accuracy of the longitudinal controller. The simulation video is also added [here](./images/result.mp4).
 <p align="center">
     <img src="./images/trajectory.png" title="speed"/>
 </p>
@@ -67,6 +67,6 @@ In this images, you can see the reference and traveled trajectories in order to 
 </p>
 
 <video align="center" width="500" height="350" controls>
-  <source src="./images/results.mp4" type="video/mp4">
+  <source src="./images/result.mp4" type="video/mp4">
 </video>
 
