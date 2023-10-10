@@ -17,7 +17,7 @@ v_k \\
 \omega_k
 \end{bmatrix}
 + \mathbf{w}_k)
-\, \mathbf{w}_k = \mathcal{N}\left(\mathbf{0}, \mathbf{Q})
+\, \mathbf{w}_k = \mathcal{N}(\mathbf{0}, \mathbf{Q})
 \end{align}$$
 
 where $\mathbf{x}_k = \left[ x \, y \, \theta \right]^T$ is the current state vector representing the current position of the vehicle, $v_k$ and $\omega_k$ are linear and angular velocity inputs, and $\mathbf{w}_k$ is the process noise with zero mean and covariance matrix of $Q$.
