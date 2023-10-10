@@ -7,5 +7,6 @@ In this repository, we try to introduce important aspects of self driving cars b
 
 * [Vehicle Modeling](./modeling)
 * [Vehicle Control](./controlling/)
+* [Vehicle Position Estimation](./position_estimation/)
 
     
