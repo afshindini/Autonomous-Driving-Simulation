@@ -6,7 +6,7 @@ The measurements are collected with a LIDAR sensor showing the landmarks in the 
 The motion model allows us to use Kalman filter. To do so, we assume that the vehicle gets linear and angular velocity as inputs and outputs the 2D position of the vehicle. This model can written as following:
 
 $$\begin{align}
-\mathbf{x}_{k} &= \mathbf{x}_{k-1} + T
+\mathbf{x_k} = \mathbf{x_{k-1}} + T
 \begin{bmatrix}
 \cos\theta_{k-1} &0 \\
 \sin\theta_{k-1} &0 \\
@@ -16,10 +16,9 @@ $$\begin{align}
 \begin{bmatrix}
 v_k \\
 \omega_k
-\end{bmatrix}
-+ \mathbf{w}_k
+\end{bmatrix} + \mathbf{w}_k
 \right)
-\, , \, \, \, \, \, \mathbf{w}_k = \mathcal{N}\left(\mathbf{0}, \mathbf{Q}\right)
+\, \mathbf{w}_k = \mathcal{N}\left(\mathbf{0}, \mathbf{Q}\right)
 \end{align}$$
 
 where $\mathbf{x}_k = \left[ x \, y \, \theta \right]^T$ is the current state vector representing the current position of the vehicle, $v_k$ and $\omega_k$ are linear and angular velocity inputs, and $\mathbf{w}_k$ is the process noise with zero mean and covariance matrix of $Q$.
