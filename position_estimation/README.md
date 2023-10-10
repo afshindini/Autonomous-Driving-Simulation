@@ -6,11 +6,11 @@ The measurements are collected with a LIDAR sensor showing the landmarks in the 
 The motion model allows us to use Kalman filter. To do so, we assume that the vehicle gets linear and angular velocity as inputs and outputs the 2D position of the vehicle. This model can written as following:
 
 $$\begin{align}
-\mathbf{x}_{k} &= \mathbf{x}_{k-1} + T
+\mathbf{x}_{k} = \mathbf{x}_{k-1} + T
 \begin{bmatrix}
 \cos\theta_{k-1} &0 \\
 \sin\theta_{k-1} &0 \\
-0 &1
+0 & 1
 \end{bmatrix}
 (\begin{bmatrix}
 v_k \\
