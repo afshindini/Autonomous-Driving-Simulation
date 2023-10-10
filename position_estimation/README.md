@@ -12,14 +12,12 @@ $$\begin{align}
 \sin\theta_{k-1} &0 \\
 0 &1
 \end{bmatrix}
-\left(
-\begin{bmatrix}
+(\begin{bmatrix}
 v_k \\
 \omega_k
 \end{bmatrix}
-+ \mathbf{w}_k
-\right)
-\, , \, \, \, \, \, \mathbf{w}_k = \mathcal{N}\left(\mathbf{0}, \mathbf{Q}\right)
++ \mathbf{w}_k)
+\, \mathbf{w}_k = \mathcal{N}\left(\mathbf{0}, \mathbf{Q})
 \end{align}$$
 
 where $\mathbf{x}_k = \left[ x \, y \, \theta \right]^T$ is the current state vector representing the current position of the vehicle, $v_k$ and $\omega_k$ are linear and angular velocity inputs, and $\mathbf{w}_k$ is the process noise with zero mean and covariance matrix of $Q$.
@@ -37,7 +35,7 @@ arctan\left((y_l - y_k - d\sin\theta_{k})/(x_l - x_k - d\cos\theta_{k})\right) -
 \end{bmatrix}
 +
 \mathbf{n}^l_k
-\, , \, \, \, \, \, \mathbf{n}^l_k = \mathcal{N}\left(\mathbf{0}, \mathbf{R}\right)
+\, \mathbf{n}^l_k = \mathcal{N}\left(\mathbf{0}, \mathbf{R}\right)
 \end{align}$$
 
 where $x_l$ and $y_l$ are the ground truth coordinates of the landmark $l$, $x_k$ and $y_k$ and $\theta_{k}$ are the current pose of the vehicle, $d$ is the known distance between robot center and LIDAR laser rangefinder.
