@@ -24,45 +24,8 @@ v_k \\
 
 where $\mathbf{x}_k = \left[ x \, y \, \theta \right]^T$ is the current state vector representing the current position of the vehicle, $v_k$ and $\omega_k$ are linear and angular velocity inputs, and $\mathbf{w}_k$ is the process noise with zero mean and covariance matrix of $Q$.
 
+
 ## Measurement Model
-The measurement model representes the relationship between the vehicle pose and the LIDAR and bearing measurements, $\mathbf{y}^l_k = \left[r \, \phi \right]^T$, with the following equations:
-## Introduction
------
-
-In this assignment you will recursively estimate the position of a vehicle along a trajectory using available measurements and a motion model. 
-
-The vehicle is equipped with a very simple type of LIDAR sensor, which returns range and bearing measurements corresponding to individual landmarks in the environment. The global positions of the landmarks are assumed to be known beforehand. We will also assume known data association, that is, which measurment belong to which landmark.
-
-## Motion and Measurement Models
------
-
-### Motion Model
-
-The vehicle motion model recieves linear and angular velocity odometry readings as inputs, and outputs the state (i.e., the 2D pose) of the vehicle:
-
-\begin{align}
-\mathbf{x}_{k} &= \mathbf{x}_{k-1} + T
-\begin{bmatrix}
-\cos\theta_{k-1} &0 \\
-\sin\theta_{k-1} &0 \\
-0 &1
-\end{bmatrix}
-\left(
-\begin{bmatrix}
-v_k \\
-\omega_k
-\end{bmatrix}
-+ \mathbf{w}_k
-\right)
-\, , \, \, \, \, \, \mathbf{w}_k = \mathcal{N}\left(\mathbf{0}, \mathbf{Q}\right)
-\end{align}
-
-- $\mathbf{x}_k = \left[ x \, y \, \theta \right]^T$ is the current 2D pose of the vehicle
-- $v_k$ and $\omega_k$ are the linear and angular velocity odometry readings, which we use as inputs to the model
-
-The process noise $\mathbf{w}_k$ has a (zero mean) normal distribution with a constant covariance $\mathbf{Q}$.
-
-### Measurement Model
 
 The measurement model relates the current pose of the vehicle to the LIDAR range and bearing measurements $\mathbf{y}^l_k = \left[r \, \phi \right]^T$.
 
