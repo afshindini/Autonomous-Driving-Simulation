@@ -76,6 +76,8 @@ $$\begin{align}
 \mathbf{\hat{P}}_k &= \left(\mathbf{I} - \mathbf{K}_k \mathbf{H}_k \right)\mathbf{\check{P}}_k
 \end{align}$$
 
+The correction step is defined in the `correction_step()` method of the `PoseEstimator` class in the `ekf.py` file.
+
 ### Prediction Step in EKF
 To implement the prediction step, we should implement the following equations based on the motion model defined above:
 
@@ -87,9 +89,19 @@ $$\begin{align}
 Where
 
 $$\begin{align}
-\mathbf{F_{k-1}} = \frac{\partial \mathbf{f}}{\partial \mathbf{x_{k-1}}}|_{\mathbf{\hat{x_{k-1}}},\mathbf{u_k},0}  \,
-\mathbf{L_{k-1}} = \frac{\partial \mathbf{f}}{\partial \mathbf{w_{k}}}|_{\mathbf{\hat{x_{k-1}}},\mathbf{u_k},0}.
+\mathbf{F_{k-1}} = \frac{\partial \mathbf{f}}{\partial \mathbf{x_{k-1}}}  \,
+\mathbf{L_{k-1}} = \frac{\partial \mathbf{f}}{\partial \mathbf{w_{k}}}.
 \end{align}$$
 
+The prediction step is defined in the `prediction_step()` method of the `PoseEstimator` class in the `ekf.py` file.
 
 ## How to Run
+To run the code, one should run the `ekf.py` file which will automatically read the data file and save the results in the `image` directory.
+
+## Results
+By running the aobve estimator, one can find the exact position of the vehicle at each time stamp. The following images shows how the Kalman filter estimates the vehicle state at each timestamp using the LIDAR measurement range.
+
+<p align="center">
+    <img src="./images/Estimated-Theta-trajectory.gif" title="theta" width="300" height="300"/>
+    <img src="./images/Estimated-YX-trajectory.gif" title="xy" width="300" height="300"/> 
+</p>
